@@ -1,0 +1,29 @@
+PROBLEM:
+Write a program that takes an integer as input and checks whether it is a prime number or not. Print PRIME NUMBER if it is prime, otherwise print NOT A PRIME NUMBER.
+
+CODE:
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int s=0;
+        if(a==1){
+            System.out.println("NOT A PRIME NUMBER");
+        }
+        else{
+            for(int i=2; i<=a ; i++){
+                if(a%i==0){
+                s=s+1;
+                }
+            }
+            if(s<2){
+            System.out.println("PRIME NUMBER");
+            }
+            else{
+                System.out.println("NOT A PRIME NUMBER");
+            }
+        }
+    }
+}
