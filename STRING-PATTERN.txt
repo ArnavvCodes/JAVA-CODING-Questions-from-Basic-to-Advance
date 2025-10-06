@@ -1,0 +1,19 @@
+PROBLEM:
+Write a program that takes a string and an integer n as input, then prints a pattern where line i contains the given string repeated i times, for all lines from 1 to n.
+
+CODE:
+import java.util.Scanner;
+
+public class even {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ENTER THE STRING:");
+        String word = sc.next();
+        System.out.print("ENTER THE LIMIT:");
+        int n = sc.nextInt();
+        for(int i=1 ; i<=n ; i++ )
+        {
+            System.out.println(word.repeat(i));
+        }
+    }
+}
