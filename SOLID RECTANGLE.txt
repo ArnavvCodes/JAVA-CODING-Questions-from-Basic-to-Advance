@@ -1,0 +1,15 @@
+PROBLEM:
+Write a Java program that takes the number of rows and columns as user input and prints a solid rectangle pattern of stars (*).
+
+CODE:
+import java.util.Scanner;
+public class pattern1 {
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();             //no. of rows(vertical lines)
+        int m = sc.nextInt();             //no, of column(horizontal lines)
+        for( int i=1 ; i<=n ; i++){
+            System.out.println("*".repeat(m));
+        }
+    }
+}
