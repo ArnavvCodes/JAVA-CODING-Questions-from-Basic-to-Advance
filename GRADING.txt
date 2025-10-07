@@ -1,0 +1,45 @@
+PROBLEM:
+Create a menu-driven program where the user can enter 1 or 0.
+
+If the user enters 1, the program repeatedly takes input for a student’s marks (out of 100) and prints a message based on the score:
+
+Marks ≥ 90 → "This is Good"
+
+60 ≤ Marks ≤ 89 → "This is also Good"
+
+0 ≤ Marks ≤ 59 → "This is Good as well" (because marks don’t matter, effort does)
+
+If the user enters 0, the program stops.
+
+Any other input is treated as invalid.
+
+CODE:
+import java.util.Scanner;
+
+public class grading {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        for ( ; ; )
+        {
+            int c = sc.nextInt();
+            switch(c)
+            {
+                case 1:
+                int m = sc.nextInt();
+                if (m>=90){
+                    System.out.println("THIS IS GOOD");
+                }
+                else if(m>60){
+                    System.out.println("THIS IS ALSO GOOD");
+                }
+                else{
+                    System.out.println("THIS IS GOOD AS WELL");
+                }
+                break;
+                case 0:  System.out.println("PROGRAM STOPPED"); 
+                return;
+                default: System.out.println("INVALID INPUT");
+            }
+        }
+    }
+}
