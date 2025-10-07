@@ -1,0 +1,26 @@
+PROBLEM:
+Write a Java program to print a right-angled triangle(HALF PYRAMID) of stars. The program should take the number of rows n as input.
+
+Example: If n = 5
+
+Expected output:
+*
+**
+***
+****
+*****
+
+CODE:
+import java.util.Scanner;
+public class pattern3 {
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();       // rows count
+        for(int i=1 ; i<=n ; i++){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println( );
+        }
+    }
+}
