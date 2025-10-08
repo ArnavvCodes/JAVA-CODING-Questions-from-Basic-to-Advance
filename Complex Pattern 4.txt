@@ -1,0 +1,29 @@
+PROBLEM:
+Write a Java program to print an inverted half pyramid of stars. The program should take the number of rows n as input.
+
+Example Input:
+
+5
+
+Expected Output:
+
+*****
+****
+***
+**
+*
+
+CODE:
+import java.util.Scanner;
+public class pattern4 {
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();       // rows count
+        for(int i=1 ; i<=n ; i++){
+            for(int j=n;j>=i;j--){
+                System.out.print("*");
+            }
+            System.out.println( );
+        }
+    }
+}
