@@ -1,0 +1,29 @@
+PROBLEM:
+  Print a solid rhombus pattern by taking n(rows) by user.
+
+     *****
+    *****
+   *****
+  *****
+ *****
+
+
+CODE:
+
+import java.util.Scanner;
+
+public class pattern10 {
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        for(int i=n;i>=1;i--){            //prints one row.
+            for(int j=1;j<=i;j++){        //prints i spaces 
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++){        //prints n stars on the same row
+                System.out.print("*");
+            }
+            System.out.println("");    //next line
+        }
+    }
+}
