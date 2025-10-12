@@ -1,0 +1,33 @@
+PROBLEM:
+Write a Java program to check whether a given number is a prime number using a user-defined function.
+
+CODE:
+import java.util.Scanner;
+public class func4 {
+    public static char isPrime(int n){
+        int a=0;
+        for(int i=2; i<=n ; i++){
+            if (n%i==0){
+                a=a+1;
+            }
+        }
+            if (a<=1){
+                System.out.println("IT's A PRIME NUMBER");
+            }
+            else{
+                System.out.println("NOT A PRIME NUMBER");
+            }
+        return 0;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n==1){
+            System.out.println("NOT A PRIME NUMBER");
+        }
+        else{
+            char ans = isPrime(n);
+            System.out.println(ans);
+        }
+    }
+}
