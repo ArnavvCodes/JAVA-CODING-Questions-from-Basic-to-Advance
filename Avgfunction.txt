@@ -1,0 +1,20 @@
+PROBLEM: 
+Write a Java program to input three numbers from the user and calculate their average using a user-defined function.
+
+
+CODE:
+import java.util.Scanner;
+public class func7 {
+    public static float calAvg(int a,int b,int c){
+        float avg = (a+b+c)/3.0f;  // use 3.0f for float division
+        return avg; //return the average value
+    }
+    public static void main(String[] arg){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        float ans = calAvg(a,b,c);
+        System.out.println("average is:"+ans);
+    }
+}
