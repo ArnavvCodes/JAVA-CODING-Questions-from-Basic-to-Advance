@@ -1,0 +1,30 @@
+PROBLEM:
+Take an array of numbers as input and check if it is an array sorted in ascending order.
+Eg : { 1, 2, 4, 7 } is sorted in ascending order.
+       {3, 4, 6, 2} is not sorted in ascending order.
+
+
+CODE:
+import java.util.Scanner;
+public class array4 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int array[] = new int [n];
+        for(int i=0;i<=n-1;i++){
+            array[i]=sc.nextInt();
+        }
+        int a = 0;
+        for(int i=0;i<(n-1);i++){
+            if(array[i]<array[i+1]){
+                a=a+1;
+            }
+        }
+        if(a==n-1){
+            System.out.println("THE ARRAY IS SORTED IN ASCENDING ORDER");
+        }
+        else{
+            System.out.println("THE ARRAY IS NOT SORTED IN ASCENDING ORDER");
+        }
+    }
+}
