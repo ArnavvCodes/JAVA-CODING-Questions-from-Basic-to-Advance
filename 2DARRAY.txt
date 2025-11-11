@@ -1,0 +1,32 @@
+PROBLEM:Write a Java program to create a 2D array (matrix) by taking the number of rows and columns as input from the user.
+Then, input all the elements of the matrix and display the matrix in standard 2D form (row-wise).
+
+
+CODE:
+
+import java.util.Scanner;
+public class A2D1 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int rows = sc.nextInt();   // number of rows
+        int cols = sc.nextInt();   // number of columns
+        int[][] matrix = new int[rows][cols];  // declaring 2D array
+
+        // input elements
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols; j++){
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+
+        // print the matrix
+        System.out.println("The matrix is:");
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols; j++){
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();  // move to next line after each row
+        }
+    }
+}
