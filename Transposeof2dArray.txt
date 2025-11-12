@@ -1,0 +1,26 @@
+PROBLEM:
+Write a Java program to input a 2D matrix of size n × m from the user and print its transpose.
+The transpose of a matrix is obtained by swapping its rows with columns — i.e., the element at position (i, j) in the original matrix moves to position (j, i) in the transposed matrix.
+
+CODE:
+import java.util.Scanner;
+public class A2D3 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int[][] matrix = new int[n][m]; 
+        for(int i =0;i<n;i++){
+            for(int j=0;j<m;j++){
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("Transpose of the matrix is:");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                System.out.print(matrix[j][i]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
